@@ -1,9 +1,6 @@
-version: "3.9"
+FROM quay.io/keycloak/keycloak:24.0.4
 
-services:
-  keycloak:
-    image: quay.io/keycloak/keycloak:24.0.4
-    command: start-dev
-    ports:
-      - "8080:8080"
+ENV KEYCLOAK_ADMIN=admin
+ENV KEYCLOAK_ADMIN_PASSWORD=admin
 
+CMD ["start-dev", "--http-port=8080"]

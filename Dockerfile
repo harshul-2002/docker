@@ -4,4 +4,4 @@ ENV KEYCLOAK_ADMIN=admin
 ENV KEYCLOAK_ADMIN_PASSWORD=admin
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
-CMD ["start-dev","--http-port=${PORT}","--hostname-strict=false"]
+CMD ["start-dev","--http-enabled=true","--http-port=8080","--hostname-strict=false"]
